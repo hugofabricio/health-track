@@ -1,0 +1,22 @@
+{
+  "extends": "standard",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "globals": {
+    "Atomics": "readable",
+    "SharedArrayBuffer": "readable"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "off",
+    "allowEmptyCatch": true,
+    "import/prefer-default-export": "off"
+  }
+}

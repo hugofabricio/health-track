@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="h-100" lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="csrf-token" content="" />
+  <title>HealthTrack</title>
+</head>
+<body class="body -public h-100">
+
+  <main class="main h-100" role="main">
+
+    <section class="section -login h-100">
+      <article class="row m-0 h-100">
+        <div class="col-sm-6 order-sm-6 h-100 p-0">
+          <div class="d-flex align-items-center h-100">
+            <div class="section-content w-100">
+              <h2 class="title text text-primary mb-4">Health Track</h2>
+              <form action="./dashboard.html" class="form mb-5" method="POST" novalidate>
+                <div class="form-group">
+                  <label for="login" class="form-label">E-mail</label>
+                  <input type="login" name="login" class="form-control" id="login" placeholder="seuemail@fiap.com.br">
+                </div>
+                <div class="form-group">
+                  <label for="password" class="form-label">Senha</label>
+                  <input type="password" name="password" class="form-control" id="password">
+                </div>
+                <div class="row mb-4">
+                  <div class="col-12 col-sm-6">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" name="remember" id="remember" value="1">
+                      <label for="remember" class="custom-control-label fs-sm text text-uppercase">Continuar conectado</label>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 text-right">
+                    <a href="./forgot-password.html" class="link fs-sm text text-uppercase" title="Esqueceu a senha?">Esqueceu a senha?</a>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Acessar</button>
+              </form>
+
+              <a href="./register.html" class="link fs-sm text text-uppercase" title="Ainda não tem conta? Cadastre-se">Ainda não tem conta? Cadastre-se</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 order-sm-0 p-0">
+          <div class="intro w-100 h-100">
+            <div class="parallax-image h-bg-cover w-100 h-100"></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <small class="footer-author fs-xs text text-uppercase">FIAP - By Hugo Fabricio</small>
+  </footer>
+
+</body>
+</html>

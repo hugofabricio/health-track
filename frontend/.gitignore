@@ -1,0 +1,34 @@
+# Project
+dist/*
+
+# Node
+node_modules
+npm-debug.log
+yarn.lock
+package-lock.json
+logs
+lib-cov
+
+# Sass
+.sass-cache
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+Icon
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Eslint
+.eslintcache
+
+# Apps
+.idea

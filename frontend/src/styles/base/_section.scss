@@ -1,0 +1,17 @@
+/* Section */
+.section {
+
+    &.-login {
+      .section-content {
+        padding-left: 120px;
+        padding-right: 120px;
+      }
+
+      .custom-checkbox {
+        .custom-control-label {
+          line-height: 2;
+        }
+      }
+    }
+
+}
