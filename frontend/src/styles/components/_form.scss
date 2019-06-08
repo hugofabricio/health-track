@@ -1,2 +1,20 @@
 /* Form */
-.form {}
+.form {
+  .custom-checkbox {
+    .custom-control-label {
+      line-height: 2.4;
+      &:before {
+        top: 5px;
+      }
+    }
+  }
+
+  &.-light {
+    .form-control {
+      border-color: $color10;
+      &:focus {
+        box-shadow: 0 0 0 $input-btn-focus-width rgba($color10, .25);
+      }
+    }
+  }
+}

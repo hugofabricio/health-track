@@ -1,17 +1,48 @@
 /* Section */
 .section {
 
-    &.-login {
-      .section-content {
-        padding-left: 120px;
-        padding-right: 120px;
-      }
+  &.-error {
+    background-color: $color30;
+    min-height: 400px;
+    .title {
+      font-size: 100px;
+      font-weight: 700;
+    }
+  }
 
-      .custom-checkbox {
-        .custom-control-label {
-          line-height: 2;
-        }
-      }
+  &.-login {
+    position: relative;
+    min-height: 600px;
+  }
+
+  &.-register {
+    background-color: $color30;
+    min-height: 700px;
+    @include media("<=phone") {
+      min-height: 850px;
+    }
+  }
+
+  &.-recover {
+    background-color: $color30;
+    min-height: 400px;
+  }
+
+  &.-login,
+  &.-register,
+  &.-recover,
+  &.-error {
+    height: 100%;
+    .section-content {
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
 
+    @include media("<=tablet") {
+      .section-content {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
 }

@@ -72,7 +72,7 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         $color10 !default;
 $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
@@ -98,7 +98,7 @@ $theme-color-interval:      8% !default;
 $yiq-contrasted-threshold:  150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             $gray-900 !default;
+$yiq-text-dark:             $primary !default;
 $yiq-text-light:            $white !default;
 
 
@@ -383,7 +383,7 @@ $table-border-level:          -6 !default;
 $input-btn-padding-y:         .375rem !default;
 $input-btn-padding-x:         .75rem !default;
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         $font-size-base !default;
+$input-btn-font-size:         $font-size-sm !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:       .2rem !default;
@@ -609,7 +609,7 @@ $custom-range-track-box-shadow:     inset 0 .25rem .25rem rgba($black, .1) !defa
 
 $custom-range-thumb-width:                   1rem !default;
 $custom-range-thumb-height:                  $custom-range-thumb-width !default;
-$custom-range-thumb-bg:                      $component-active-bg !default;
+$custom-range-thumb-bg:                      darken($component-active-bg, 15%) !default;
 $custom-range-thumb-border:                  0 !default;
 $custom-range-thumb-border-radius:           1rem !default;
 $custom-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;

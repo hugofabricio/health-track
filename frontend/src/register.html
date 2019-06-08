@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html class="h-100" lang="pt-br">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no" />
@@ -7,7 +7,71 @@
   <meta name="csrf-token" content="" />
   <title>HealthTrack</title>
 </head>
-<body class="body -public">
+<body class="body -public h-100">
+
+  <main class="main" role="main">
+
+    <section class="section -register">
+      <div class="container-fluid h-100">
+        <article class="row h-100">
+          <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 h-100">
+            <div class="d-flex align-items-center h-100">
+              <div class="section-content w-100">
+                <div class="row">
+                  <div class="col-sm-8 offset-sm-2">
+                    <h2 class="brand -light h-bg-contain mb-4">Health Track</h2>
+                    <form action="./dashboard.html" class="form mb-4" novalidate>
+                      <div class="form-row">
+                        <div class="form-group col-sm-12">
+                          <label for="name" class="form-label text-white">Nome</label>
+                          <input type="text" name="name" class="form-control" id="name">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <label for="birthdate" class="form-label text-white">Nascimento</label>
+                          <input type="text" name="birthdate" class="form-control" id="birthdate">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <label for="birthdate" class="form-label text-white">Gênero</label>
+                          <select class="custom-select">
+                            <option selected>Selecione</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-12">
+                          <label for="size" class="form-label text-white">Altura</label>
+                          <input type="range" class="custom-range" step="1" min="0" max="250" id="size">
+                        </div>
+                        <div class="form-group col-sm-12">
+                          <label for="email" class="form-label text-white">E-mail</label>
+                          <input type="email" name="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <label for="password" class="form-label text-white">Senha</label>
+                          <input type="password" name="password" class="form-control" id="password">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <label for="password_confirm" class="form-label text-white">Confirmar Senha</label>
+                          <input type="password" name="password_confirm" class="form-control" id="password_confirm">
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-outline-light">Registrar</button>
+                    </form>
+                    <a href="./login.html" class="link text-white fs-sm text text-uppercase" title="Já possui cadastro? Faça login aqui">Já possui cadastro? Faça login aqui</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <small class="footer-author fs-xs text text-uppercase">FIAP - By Hugo Fabricio</small>
+  </footer>
 
 </body>
 </html>

@@ -16,4 +16,10 @@
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
+
+  &-multiply {
+    background-blend-mode: multiply;
+    background-color: $color30;
+    position: relative;
+  }
 }
