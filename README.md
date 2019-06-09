@@ -3,6 +3,7 @@
 > # Health Track
 >
 > App to track your health, activities and food
+> See in action: [https://healthtrack-app.herokuapp.com](https://healthtrack-app.herokuapp.com)
 
 ### Setup
 
