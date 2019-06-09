@@ -1,0 +1,30 @@
+/* NavLink */
+.nav-link {
+  &.-navbar {
+    font-size: 12px;
+    &:before {
+      margin-right: 6px;
+    }
+    span {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+  }
+  &.-sidebar {
+    text-align: center;
+    line-height: .8;
+    &:before {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    span {
+      text-transform: uppercase;
+      font-size: 10px;
+      line-height: 10px !important;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+  }
+}

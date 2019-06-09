@@ -1,11 +1,11 @@
 /* Typography */
-$iconfont: 'icons';
+$fa-font-name: "font-awesome" !default;
+$fa-font-path: "../fonts/webfonts" !default;
 
-/* Icons */
 @include font-face(
-  $iconfont,
-  "../fonts/iconfont/#{$iconfont}",
+  $fa-font-name,
+  "../fonts/#{$fa-font-path}/fa-regular-400",
+  400,
   normal,
-  normal,
-  eot woff ttf svg
+  eot woff woff2 ttf svg
 );

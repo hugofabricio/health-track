@@ -9,5 +9,111 @@
 </head>
 <body class="body -private">
 
+  <header class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+    <a href="./dashboard.html" class="navbar-brand mr-0 mr-md-2">
+      <h1 class="brand -tiny -light h-bg-contain m-0">Health Track</h1>
+    </a>
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item">
+        <a class="nav-link -navbar icon-user-edit" href="./profile.html" title="Perfil">
+          <span>Perfil</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link -navbar icon-power-off" href="./login.html" title="Sair">
+          <span>Sair</span>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-1 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="./dashboard.html" class="nav-link -sidebar icon-home active" title="Dashboard">
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./list.html" class="nav-link -sidebar icon-weight" title="Meu Peso">
+                <span>Meu Peso</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./list.html" class="nav-link -sidebar icon-stethoscope" title="Pressão Arterial">
+                <span>Pressão Arterial</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./list.html" class="nav-link -sidebar icon-utensils-alt" title="Alimentação">
+                <span>Alimentação</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./list.html" class="nav-link -sidebar icon-running" title="Exercícios">
+                <span>Exercícios</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./list.html" class="nav-link -sidebar icon-heart" title="Glicemia">
+                <span>Glicemia</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-11">
+        <section class="page -dashboard">
+          <header class="page-header">
+
+          </header>
+
+          <article class="page-content">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">IMC</h5>
+                    <p class="card-text">26,7</p>
+                  </div>
+                  <div class="card-footer bg-warning">
+                    <small class="text-white text-uppercase">Sobrepeso</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Pressão Arterial</h5>
+                    <p class="card-text">120/80</p>
+                  </div>
+                  <div class="card-footer bg-success">
+                    <small class="text-white text-uppercase">Normal</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Glicose</h5>
+                    <p class="card-text">200 mg/dl</p>
+                  </div>
+                  <div class="card-footer bg-danger">
+                    <small class="text-white text-uppercase">Diabético</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+
 </body>
 </html>

@@ -1,31 +1,12 @@
 /**
  * Icon
- * Usage -icon-[name]-[after|before]
+ * Usage icon-[name]
  */
 
 [class^="icon"],
 [class*=" icon"] {
-  &::before,
-  &::after {
-    font-family: $iconfont !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-}
-
-.icon {
-  @each $key, $value in $icons {
-    &-#{$key} {
-      &-after::after,
-      &-before::before {
-        content: $value;
-      }
-    }
+  &:before {
+    font-family: $fa-font-name;
+    font-display: $fa-font-display;
   }
 }

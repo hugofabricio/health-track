@@ -1,2 +1,8 @@
 /* Page */
-.page {}
+.page {
+  &.-dashboard {
+    .page-heading {
+
+    }
+  }
+}

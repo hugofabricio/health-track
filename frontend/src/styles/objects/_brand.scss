@@ -4,6 +4,11 @@
   width: 220px;
   height: 29px;
 
+  &.-tiny {
+    width: 160px;
+    height: 21px;
+  }
+
   &.-default {
     background-image: url('../images/brand.svg');
   }
