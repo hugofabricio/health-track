@@ -5,26 +5,17 @@
   bottom: 0;
   left: 0;
   z-index: 100;
-  padding: 56px 0 0;
-  box-shadow: inset -1px 0 0 rgba($color20, .1);
+  padding: 50px 0 0;
+  background-color: $color10;
+  box-shadow: 0 16px 48px rgba($color20, 0.125);
 
   .sidebar-sticky {
     position: relative;
     top: 0;
     height: calc(100vh - 56px);
-    padding-top: 20px;
     padding-bottom: 20px;
     overflow-x: hidden;
     overflow-y: auto;
-  }
-
-  .nav {
-    .nav-item {
-      margin-bottom: 20px;
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
   }
 
   @supports ((position: -webkit-sticky) or (position: sticky)) {

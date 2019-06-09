@@ -9,7 +9,7 @@
 </head>
 <body class="body -private">
 
-  <header class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+  <header class="header navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <a href="./dashboard.html" class="navbar-brand mr-0 mr-md-2">
       <h1 class="brand -tiny -light h-bg-contain m-0">Health Track</h1>
     </a>
@@ -30,11 +30,11 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav class="col-md-1 d-none d-md-block bg-light sidebar">
+      <nav class="sidebar col-md-3 col-lg-1">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a href="./dashboard.html" class="nav-link -sidebar icon-home active" title="Dashboard">
+              <a href="./dashboard.html" class="nav-link -active -sidebar icon-home" title="Dashboard">
                 <span>Dashboard</span>
               </a>
             </li>
@@ -68,43 +68,72 @@
       </nav>
 
       <main role="main" class="col-md-9 ml-sm-auto col-lg-11">
-        <section class="page -dashboard">
-          <header class="page-header">
-
+        <section class="page -dashboard px-5">
+          <header class="page-header d-none">
+            <h2>Dashboard</h2>
           </header>
 
           <article class="page-content">
             <div class="row">
-              <div class="col-sm-4">
-                <div class="card">
+              <div class="col-sm-12 mb-4">
+                <div class="card -user">
                   <div class="card-body">
-                    <h5 class="card-title">IMC</h5>
+                    <div class="media">
+                      <div class="avatar h-bg-contain align-self-center ml-1 mr-4" style="background-image: url('https://scontent.fjpa1-1.fna.fbcdn.net/v/t1.0-9/23517615_1632658530126225_5740035917628137473_n.jpg?_nc_cat=107&_nc_oc=AQlL9_c9V0AQx7kcDitF3k1mMWD21SGPDJEHqmdhhEczZsTgNnUSg3d6zR-_M5D6Zcd8SGux_vK84I8X56pqaHX3&_nc_ht=scontent.fjpa1-1.fna&oh=f358652dc1c02d7f50268fbf0b4364a5&oe=5D916EBA');"></div>
+                      <div class="media-body">
+                        <h3 class="card-title mt-3 mb-0">Hugo Fabricio</h3>
+                        <ul class="list-inline mb-0">
+                          <li class="list-inline-item">
+                            <p class="card-text mb-0">28 anos</p>
+                          </li>
+                          <li class="list-inline-item">
+                            <p class="card-text mb-0">87 kilos</p>
+                          </li>
+                          <li class="list-inline-item">
+                            <p class="card-text mb-0">1.84 altura</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card -status">
+                  <div class="card-body">
+                    <h3 class="card-title icon-meh">
+                      <span>IMC</span>
+                    </h3>
                     <p class="card-text">26,7</p>
                   </div>
                   <div class="card-footer bg-warning">
-                    <small class="text-white text-uppercase">Sobrepeso</small>
+                    <small class="text text-white text-uppercase">Sobrepeso</small>
                   </div>
                 </div>
               </div>
               <div class="col-sm-4">
-                <div class="card">
+                <div class="card -status">
                   <div class="card-body">
-                    <h5 class="card-title">Pressão Arterial</h5>
+                    <h3 class="card-title icon-smile">
+                      <span>Pressão Arterial</span>
+                    </h3>
                     <p class="card-text">120/80</p>
                   </div>
                   <div class="card-footer bg-success">
-                    <small class="text-white text-uppercase">Normal</small>
+                    <small class="text text-white text-uppercase">Normal</small>
                   </div>
                 </div>
               </div>
               <div class="col-sm-4">
-                <div class="card">
+                <div class="card -status">
                   <div class="card-body">
-                    <h5 class="card-title">Glicose</h5>
+                    <h3 class="card-title icon-frown">
+                      <span>Glicose</span>
+                    </h3>
                     <p class="card-text">200 mg/dl</p>
                   </div>
                   <div class="card-footer bg-danger">
-                    <small class="text-white text-uppercase">Diabético</small>
+                    <small class="text text-white text-uppercase">Diabético</small>
                   </div>
                 </div>
               </div>

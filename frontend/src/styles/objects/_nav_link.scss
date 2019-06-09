@@ -12,6 +12,8 @@
     }
   }
   &.-sidebar {
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: center;
     line-height: .8;
     &:before {
@@ -25,6 +27,12 @@
       line-height: 10px !important;
       letter-spacing: 1px;
       font-weight: 700;
+    }
+
+    &:hover,
+    &.-active {
+      color: $color10;
+      background-color: darken($color30, 10%);
     }
   }
 }

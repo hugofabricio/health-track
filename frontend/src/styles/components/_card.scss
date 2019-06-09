@@ -1,2 +1,58 @@
 /* Card */
-.card {}
+.card {
+  background-color: $color10;
+  box-shadow: 0 16px 48px rgba($color20, 0.125);
+
+  &.-user {
+    text-transform: uppercase;
+
+    .card-title {
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: $color30;
+    }
+    .card-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: $color16;
+    }
+  }
+
+  &.-status {
+    .card-title {
+      font-size: 14px;
+      position: relative;
+      padding-right: 30px;
+      margin-bottom: 0;
+
+      span {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: $color16;
+      }
+
+      &:before {
+        font-size: 32px;
+        color: $color14;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .card-text {
+      font-size: 32px;
+      font-weight: 700;
+      color: $color16;
+    }
+
+    .card-footer {
+      border-top: 0;
+      .text {
+        font-weight: 700;
+      }
+    }
+  }
+}
