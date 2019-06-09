@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.2" baseProfile="tiny" id="logo-fiap"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249.1 67"
+	 xml:space="preserve">
+<g>
+	<rect x="70.9" y="0.5" fill="#ED145B" width="4.9" height="66.5"/>
+	<rect x="18.5" y="32.3" fill="#ED145B" width="24.1" height="4.6"/>
+	<polygon fill="#ED145B" points="0,67 4.9,67 4.9,36.9 4.9,36.9 4.9,32.3 4.9,32.3 4.9,5.1 56.2,5.1 56.2,0.5 0,0.5 	"/>
+	<path fill="#ED145B" d="M224.4,0.3L224.4,0.3l-39.4,0v66.5h4.9V42h0v-4.6h0V4.8H224c12,0,20.1,5.5,20.1,16.1v0.2
+		c0,9.9-8.4,16.3-20.7,16.3h-15.6V42h15.3c13.9,0,25.9-7.2,25.9-21.2v-0.2C249.1,7.8,239.1,0.3,224.4,0.3z"/>
+	<polygon fill="#ED145B" points="128.5,0 87.4,67 92.5,67 130.7,5.4 150.7,37.4 156.3,37.4 133.2,0 	"/>
+	<polygon fill="#ED145B" points="158.4,49.7 169.1,67 174.5,67 163.9,49.7 	"/>
+</g>
+</svg>
