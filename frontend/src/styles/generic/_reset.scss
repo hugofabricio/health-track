@@ -9,6 +9,10 @@ body {
   text-size-adjust: none;
   &.-private {
     padding-top: 50px;
+    padding-bottom: 50px;
+    main {
+      width: calc(100% - 120px);
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 use Rack::Static,
   :urls => ["/images", "/scripts", "/styles", "/fonts", "/favicons"],
   :root => "public",
-  :index => 'login.html'
+  :index => 'index.html'
 
 map "/" do
   run lambda { |env|
@@ -11,7 +11,7 @@ map "/" do
         'Content-Type'  => 'text/html',
         'Cache-Control' => 'public, max-age=86400'
       },
-      File.open('public/login.html', File::RDONLY)
+      File.open('public/index.html', File::RDONLY)
     ]
   }
 end
@@ -64,6 +64,84 @@ map "/dashboard.html" do
         'Cache-Control' => 'public, max-age=86400'
       },
       File.open('public/dashboard.html', File::RDONLY)
+    ]
+  }
+end
+
+map "/profile.html" do
+  run lambda { |env|
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/profile.html', File::RDONLY)
+    ]
+  }
+end
+
+map "/weight.html" do
+  run lambda { |env|
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/weight.html', File::RDONLY)
+    ]
+  }
+end
+
+map "/blood-pressure.html" do
+  run lambda { |env|
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/blood-pressure.html', File::RDONLY)
+    ]
+  }
+end
+
+map "/food.html" do
+  run lambda { |env|
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/food.html', File::RDONLY)
+    ]
+  }
+end
+
+map "/exercises.html" do
+  run lambda { |env|
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/exercises.html', File::RDONLY)
+    ]
+  }
+end
+
+map "/glycemia.html" do
+  run lambda { |env|
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/glycemia.html', File::RDONLY)
     ]
   }
 end
