@@ -96,7 +96,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: path.join("styles", "app.min.css")
+      filename: path.join("styles", "app.min.css?[hash]")
     }),
     new WebpackBar({
       color: "#ff6469"
