@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="csrf-token" content="" />
   <title>HealthTrack</title>
+  <meta property="og:title" content="HealthTrack - By Hugo Fabricio" />
+  <meta property="og:image" content="https://healthtrack-app.herokuapp.com/images/facebook.jpg" />
 </head>
 <body class="body -private">
 
@@ -69,17 +70,196 @@
 
       <main role="main" class="ml-auto">
         <section class="page -dashboard px-5">
-          <header class="page-header">
-            <h2 class="page-title">Pressão Arterial</h2>
+          <header class="page-header mb-4">
+            <div class="row">
+              <div class="col-9 col-sm-6">
+                <h2 class="page-title">Pressão Arterial</h2>
+              </div>
+              <div class="col-3 col-sm-6 text-right">
+                <button type="button" class="btn btn-success btn-only-icon-mobile icon-plus" data-toggle="modal" data-target="#modal-create">
+                  <span>Adicionar</span>
+                </button>
+              </div>
+            </div>
           </header>
-
           <article class="page-content">
+            <div class="card mb-5">
+              <div class="card-body p-0">
+                <table class="table table-borderless table-striped mb-0">
+                  <thead class="table-thead">
+                    <tr class="table-row">
+                      <th class="table-col" scope="col">Data da medição</th>
+                      <th class="table-col" scope="col">Pressão sistólica (PAS)</th>
+                      <th class="table-col" scope="col">Pressão diastólica (PAD)</th>
+                      <th class="table-col" scope="col">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-tbody">
+                    <tr class="table-row">
+                      <td class="table-col" data-label="Data da medição">
+                        20/07/2019 10:00
+                      </td>
+                      <td class="table-col" data-label="PAS">
+                        140
+                      </td>
+                      <td class="table-col" data-label="PAD">
+                        70
+                      </td>
+                      <td class="table-col" data-label="Ações">
+                        <button type="button" class="btn btn-info btn-sm btn-only-icon-mobile icon-pencil" data-toggle="modal" data-target="#modal-edit">
+                          <span>Editar</span>
+                        </button>
+                        <a href="#" class="btn btn-danger btn-sm btn-only-icon-mobile icon-trash-alt" title="Excluir">
+                          <span>Excluir</span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-col" data-label="Data da medição">
+                        20/07/2019 08:30
+                      </td>
+                      <td class="table-col" data-label="PAS">
+                        120
+                      </td>
+                      <td class="table-col" data-label="PAD">
+                        80
+                      </td>
+                      <td class="table-col" data-label="Ações">
+                        <button type="button" class="btn btn-info btn-sm btn-only-icon-mobile icon-pencil" data-toggle="modal" data-target="#modal-edit">
+                          <span>Editar</span>
+                        </button>
+                        <a href="#" class="btn btn-danger btn-sm btn-only-icon-mobile icon-trash-alt" title="Excluir">
+                          <span>Excluir</span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-col" data-label="Data da medição">
+                        15/07/2019 21:00
+                      </td>
+                      <td class="table-col" data-label="PAS">
+                        120
+                      </td>
+                      <td class="table-col" data-label="PAD">
+                        80
+                      </td>
+                      <td class="table-col" data-label="Ações">
+                        <button type="button" class="btn btn-info btn-sm btn-only-icon-mobile icon-pencil" data-toggle="modal" data-target="#modal-edit">
+                          <span>Editar</span>
+                        </button>
+                        <a href="#" class="btn btn-danger btn-sm btn-only-icon-mobile icon-trash-alt" title="Excluir">
+                          <span>Excluir</span>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
+            <nav aria-label="Page navigation">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Anterior">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Próxima">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </article>
         </section>
       </main>
     </div>
   </div>
 
+  <div class="modal fade" id="modal-create" tabindex="-1" role="dialog" aria-labelledby="modal-create-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content bg-transparent">
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title text-white font-weight-bold" id="modal-create-title">Registrar Pressão Arterial</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body bg-white">
+          <form action="./dashboard.html" class="form" novalidate>
+            <div class="form-row">
+              <div class="form-group col-sm-6">
+                <label for="date" class="form-label">Data da medição</label>
+                <input type="text" name="date" class="form-control" id="date">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-sm-6">
+                <label for="pas" class="form-label">Pressão sistólica</label>
+                <input type="text" name="pas" class="form-control" id="pas">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="pad" class="form-label">Pressão diastólica</label>
+                <input type="text" name="pad" class="form-control" id="pad">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer bg-white">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            <span>Cancelar</span>
+          </button>
+          <button type="button" class="btn btn-success">
+            <span>Salvar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="modal-create-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content bg-transparent">
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title text-white font-weight-bold" id="modal-create-title">Editar Pressão Arterial</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body bg-white">
+          <form action="./dashboard.html" class="form" novalidate>
+            <div class="form-row">
+              <div class="form-group col-sm-6">
+                <label for="date" class="form-label">Data da medição</label>
+                <input type="text" value="20/07/2019 21:00" name="date" class="form-control" id="date">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-sm-6">
+                <label for="pas" class="form-label">Pressão sistólica</label>
+                <input type="text" value="120" name="pas" class="form-control" id="pas">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="pad" class="form-label">Pressão diastólica</label>
+                <input type="text" value="80" name="pad" class="form-control" id="pad">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer bg-white">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            <span>Cancelar</span>
+          </button>
+          <button type="button" class="btn btn-success">
+            <span>Salvar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

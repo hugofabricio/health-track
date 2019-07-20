@@ -145,3 +145,16 @@ map "/glycemia.html" do
     ]
   }
 end
+
+map "/404.html" do
+  run lambda { |env|
+    [
+      200,
+      {
+        'Content-Type'  => 'text/html',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open('public/404.html', File::RDONLY)
+    ]
+  }
+end
