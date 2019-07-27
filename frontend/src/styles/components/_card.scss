@@ -19,6 +19,18 @@
     }
 
     @include media("<=phone") {
+      .media {
+        display: block;
+      }
+      .avatar {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+      }
+      .media-body {
+        width: 100%;
+        display: block;
+      }
       .card-title {
         margin-top: 0;
         font-size: 16px;

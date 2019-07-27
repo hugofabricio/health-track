@@ -15,7 +15,7 @@
       <h1 class="brand -tiny -light h-bg-contain m-0">Health Track</h1>
     </a>
 
-    <ul class="navbar-nav flex-row ml-auto d-none d-flex">
+    <ul class="navbar-nav flex-row ml-auto d-none d-sm-flex">
       <li class="nav-item">
         <a class="nav-link -navbar icon-user-edit" href="./profile.html" title="Perfil">
           <span>Perfil</span>
@@ -27,11 +27,17 @@
         </a>
       </li>
     </ul>
+
+    <div class="flex-row ml-auto d-block d-sm-none">
+      <button class="toggle js-toggle-menu" type="button">
+        <span class="bar"></span>
+      </button>
+    </div>
   </header>
 
   <div class="container-fluid">
     <div class="row">
-      <nav class="sidebar">
+      <nav class="sidebar js-menu">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -62,6 +68,17 @@
             <li class="nav-item">
               <a href="./glycemia.html" class="nav-link -sidebar icon-heart" title="Glicemia">
                 <span>Glicemia</span>
+              </a>
+            </li>
+
+            <li class="nav-item d-block d-sm-none">
+              <a href="./profile.html" class="nav-link -sidebar icon-user-edit" title="Perfil">
+                <span>Perfil</span>
+              </a>
+            </li>
+            <li class="nav-item d-block d-sm-none">
+              <a href="./index.html" class="nav-link -sidebar icon-power-off" title="Sair">
+                <span>Sair</span>
               </a>
             </li>
           </ul>
@@ -190,21 +207,21 @@
           </button>
         </div>
         <div class="modal-body bg-white">
-          <form action="./dashboard.html" class="form" novalidate>
+          <form action="#" class="form needs-validation" id="form-create" novalidate>
             <div class="form-row">
               <div class="form-group col-sm-6">
                 <label for="date" class="form-label">Data da medição</label>
-                <input type="text" name="date" class="form-control" id="date">
+                <input type="text" name="date" class="form-control js-datetimepicker" id="date" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-sm-6">
                 <label for="pas" class="form-label">Pressão sistólica</label>
-                <input type="text" name="pas" class="form-control" id="pas">
+                <input type="text" name="pas" class="form-control" id="pas" required>
               </div>
               <div class="form-group col-sm-6">
                 <label for="pad" class="form-label">Pressão diastólica</label>
-                <input type="text" name="pad" class="form-control" id="pad">
+                <input type="text" name="pad" class="form-control" id="pad" required>
               </div>
             </div>
           </form>
@@ -213,7 +230,7 @@
           <button type="button" class="btn btn-danger" data-dismiss="modal">
             <span>Cancelar</span>
           </button>
-          <button type="button" class="btn btn-success">
+          <button type="submit" form="form-create" class="btn btn-success">
             <span>Salvar</span>
           </button>
         </div>
@@ -231,21 +248,21 @@
           </button>
         </div>
         <div class="modal-body bg-white">
-          <form action="./dashboard.html" class="form" novalidate>
+          <form action="#" class="form needs-validation" id="form-edit" novalidate>
             <div class="form-row">
               <div class="form-group col-sm-6">
                 <label for="date" class="form-label">Data da medição</label>
-                <input type="text" value="20/07/2019 21:00" name="date" class="form-control" id="date">
+                <input type="text" value="20/07/2019 21:00" name="date" class="form-control js-datetimepicker" id="date" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-sm-6">
                 <label for="pas" class="form-label">Pressão sistólica</label>
-                <input type="text" value="120" name="pas" class="form-control" id="pas">
+                <input type="text" value="120" name="pas" class="form-control" id="pas" required>
               </div>
               <div class="form-group col-sm-6">
                 <label for="pad" class="form-label">Pressão diastólica</label>
-                <input type="text" value="80" name="pad" class="form-control" id="pad">
+                <input type="text" value="80" name="pad" class="form-control" id="pad" required>
               </div>
             </div>
           </form>
@@ -254,7 +271,7 @@
           <button type="button" class="btn btn-danger" data-dismiss="modal">
             <span>Cancelar</span>
           </button>
-          <button type="button" class="btn btn-success">
+          <button type="submit" form="form-edit" class="btn btn-success">
             <span>Salvar</span>
           </button>
         </div>

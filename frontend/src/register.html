@@ -21,39 +21,39 @@
                 <div class="row">
                   <div class="col-sm-8 offset-sm-2">
                     <h2 class="brand -light h-bg-contain mb-4">Health Track</h2>
-                    <form action="./dashboard.html" class="form mb-4" novalidate>
+                    <form action="./dashboard.html" class="form mb-4 needs-validation" novalidate>
                       <div class="form-row">
                         <div class="form-group col-sm-12">
                           <label for="name" class="form-label text-white">Nome</label>
-                          <input type="text" name="name" class="form-control" id="name">
+                          <input type="text" name="name" class="form-control" id="name" required>
                         </div>
                         <div class="form-group col-sm-6">
                           <label for="birthdate" class="form-label text-white">Nascimento</label>
-                          <input type="text" name="birthdate" class="form-control" id="birthdate">
+                          <input type="text" name="birthdate" class="form-control js-datepicker" id="birthdate" required>
                         </div>
                         <div class="form-group col-sm-6">
                           <label for="birthdate" class="form-label text-white">Gênero</label>
-                          <select class="custom-select">
-                            <option selected>Selecione</option>
+                          <select class="custom-select" required>
+                            <option value="" selected>Selecione</option>
                             <option value="1">Masculino</option>
                             <option value="2">Feminino</option>
                           </select>
                         </div>
                         <div class="form-group col-sm-12">
                           <label for="size" class="form-label text-white">Altura</label>
-                          <input type="range" class="custom-range" step="1" min="0" max="250" id="size">
+                          <input type="range" class="custom-range" step="1" min="0" max="250" id="size" required>
                         </div>
                         <div class="form-group col-sm-12">
                           <label for="email" class="form-label text-white">E-mail</label>
-                          <input type="email" name="email" class="form-control" id="email">
+                          <input type="email" name="email" class="form-control" id="email" required>
                         </div>
                         <div class="form-group col-sm-6">
                           <label for="password" class="form-label text-white">Senha</label>
-                          <input type="password" name="password" class="form-control" id="password">
+                          <input type="password" name="password" class="form-control" id="password" required>
                         </div>
                         <div class="form-group col-sm-6">
                           <label for="password_confirm" class="form-label text-white">Confirmar Senha</label>
-                          <input type="password" name="password_confirm" class="form-control" id="password_confirm">
+                          <input type="password" name="password_confirm" class="form-control" id="password_confirm" required>
                         </div>
                       </div>
                       <button type="submit" class="btn btn-outline-light">Registrar</button>

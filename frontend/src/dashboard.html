@@ -15,7 +15,7 @@
       <h1 class="brand -tiny -light h-bg-contain m-0">Health Track</h1>
     </a>
 
-    <ul class="navbar-nav flex-row ml-auto d-none d-flex">
+    <ul class="navbar-nav flex-row ml-auto d-none d-sm-flex">
       <li class="nav-item">
         <a class="nav-link -navbar icon-user-edit" href="./profile.html" title="Perfil">
           <span>Perfil</span>
@@ -27,11 +27,17 @@
         </a>
       </li>
     </ul>
+
+    <div class="flex-row ml-auto d-block d-sm-none">
+      <button class="toggle js-toggle-menu" type="button">
+        <span class="bar"></span>
+      </button>
+    </div>
   </header>
 
   <div class="container-fluid">
     <div class="row">
-      <nav class="sidebar">
+      <nav class="sidebar js-menu">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -62,6 +68,17 @@
             <li class="nav-item">
               <a href="./glycemia.html" class="nav-link -sidebar icon-heart" title="Glicemia">
                 <span>Glicemia</span>
+              </a>
+            </li>
+
+            <li class="nav-item d-block d-sm-none">
+              <a href="./glycemia.html" class="nav-link -sidebar icon-user-edit" title="Perfil">
+                <span>Perfil</span>
+              </a>
+            </li>
+            <li class="nav-item d-block d-sm-none">
+              <a href="./glycemia.html" class="nav-link -sidebar icon-power-off" title="Sair">
+                <span>Sair</span>
               </a>
             </li>
           </ul>

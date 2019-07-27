@@ -7,7 +7,7 @@
   <title>HealthTrack</title>
   <meta property="og:title" content="HealthTrack - By Hugo Fabricio" />
   <meta property="og:image" content="https://healthtrack-app.herokuapp.com/images/facebook.jpg" />
-<link rel="shortcut icon" href="/favicons/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"><link rel="manifest" href="/favicons/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="FIAP Boilerplate"><link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/favicons/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/favicons/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="FIAP Boilerplate"><link href="styles/app.min.css?9ab4b46dd9ce5c52ec91" rel="stylesheet"></head>
+<link rel="shortcut icon" href="/favicons/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"><link rel="manifest" href="/favicons/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="FIAP Boilerplate"><link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/favicons/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/favicons/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="FIAP Boilerplate"><link href="styles/app.min.css?7b7909b4993ea1b92dd8" rel="stylesheet"></head>
 <body class="body -public h-100">
 
   <main class="main" role="main">
@@ -21,39 +21,39 @@
                 <div class="row">
                   <div class="col-sm-8 offset-sm-2">
                     <h2 class="brand -light h-bg-contain mb-4">Health Track</h2>
-                    <form action="./dashboard.html" class="form mb-4" novalidate>
+                    <form action="./dashboard.html" class="form mb-4 needs-validation" novalidate>
                       <div class="form-row">
                         <div class="form-group col-sm-12">
                           <label for="name" class="form-label text-white">Nome</label>
-                          <input type="text" name="name" class="form-control" id="name">
+                          <input type="text" name="name" class="form-control" id="name" required>
                         </div>
                         <div class="form-group col-sm-6">
                           <label for="birthdate" class="form-label text-white">Nascimento</label>
-                          <input type="text" name="birthdate" class="form-control" id="birthdate">
+                          <input type="text" name="birthdate" class="form-control js-datepicker" id="birthdate" required>
                         </div>
                         <div class="form-group col-sm-6">
                           <label for="birthdate" class="form-label text-white">Gênero</label>
-                          <select class="custom-select">
-                            <option selected>Selecione</option>
+                          <select class="custom-select" required>
+                            <option value="" selected>Selecione</option>
                             <option value="1">Masculino</option>
                             <option value="2">Feminino</option>
                           </select>
                         </div>
                         <div class="form-group col-sm-12">
                           <label for="size" class="form-label text-white">Altura</label>
-                          <input type="range" class="custom-range" step="1" min="0" max="250" id="size">
+                          <input type="range" class="custom-range" step="1" min="0" max="250" id="size" required>
                         </div>
                         <div class="form-group col-sm-12">
                           <label for="email" class="form-label text-white">E-mail</label>
-                          <input type="email" name="email" class="form-control" id="email">
+                          <input type="email" name="email" class="form-control" id="email" required>
                         </div>
                         <div class="form-group col-sm-6">
                           <label for="password" class="form-label text-white">Senha</label>
-                          <input type="password" name="password" class="form-control" id="password">
+                          <input type="password" name="password" class="form-control" id="password" required>
                         </div>
                         <div class="form-group col-sm-6">
                           <label for="password_confirm" class="form-label text-white">Confirmar Senha</label>
-                          <input type="password" name="password_confirm" class="form-control" id="password_confirm">
+                          <input type="password" name="password_confirm" class="form-control" id="password_confirm" required>
                         </div>
                       </div>
                       <button type="submit" class="btn btn-outline-light">Registrar</button>

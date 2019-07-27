@@ -22,5 +22,9 @@
 
   @include media("<=phone") {
     width: 100%;
+    &.-tiny {
+      width: 140px;
+      height: 18px;
+    }
   }
 }

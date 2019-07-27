@@ -9,6 +9,7 @@
   background-color: $color10;
   box-shadow: 0 16px 48px rgba($color20, 0.125);
   width: 120px;
+  transition: all .4s ease;
 
   .sidebar-sticky {
     position: relative;
@@ -23,6 +24,24 @@
     .sidebar-sticky {
       position: -webkit-sticky;
       position: sticky;
+    }
+  }
+
+  @include media("<=phone") {
+    width: 100%;
+    transform: translateX(-100%);
+    padding: 75px 50px 50px;
+
+    .sidebar-sticky {
+      width: 100%;
+    }
+
+    .nav {
+      display: block;
+    }
+
+    &.-opened {
+      transform: translateX(0);
     }
   }
 }

@@ -1,0 +1,66 @@
+/* Toggle */
+.toggle {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  outline: none !important;
+  background-color: transparent;
+  margin: auto;
+  text-align: center;
+
+  .bar {
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translateY(10px);
+    transition: all 0ms 300ms;
+    background-color: $color10;
+
+    &,
+    &:after,
+    &:before {
+      border-radius: 2px;
+      width: 22px;
+      height: 2px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 8px;
+      background-color: $color10;
+      transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      background-color: $color10;
+      transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
+
+  // Active button
+  &.-active {
+    .bar {
+      background-color: rgba($color10, 0);
+      &:after {
+          top: 0;
+          transform: rotate(45deg);
+          transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+      }
+      &:before {
+          bottom: 0;
+          transform: rotate(-45deg);
+          transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+      }
+    }
+  }
+}

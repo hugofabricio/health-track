@@ -15,7 +15,7 @@
       <h1 class="brand -tiny -light h-bg-contain m-0">Health Track</h1>
     </a>
 
-    <ul class="navbar-nav flex-row ml-auto d-none d-flex">
+    <ul class="navbar-nav flex-row ml-auto d-none d-sm-flex">
       <li class="nav-item">
         <a class="nav-link -navbar icon-user-edit" href="./profile.html" title="Perfil">
           <span>Perfil</span>
@@ -27,11 +27,17 @@
         </a>
       </li>
     </ul>
+
+    <div class="flex-row ml-auto d-block d-sm-none">
+      <button class="toggle js-toggle-menu" type="button">
+        <span class="bar"></span>
+      </button>
+    </div>
   </header>
 
   <div class="container-fluid">
     <div class="row">
-      <nav class="sidebar">
+      <nav class="sidebar js-menu">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -62,6 +68,17 @@
             <li class="nav-item">
               <a href="./glycemia.html" class="nav-link -sidebar icon-heart" title="Glicemia">
                 <span>Glicemia</span>
+              </a>
+            </li>
+
+            <li class="nav-item d-block d-sm-none">
+              <a href="./profile.html" class="nav-link -sidebar icon-user-edit" title="Perfil">
+                <span>Perfil</span>
+              </a>
+            </li>
+            <li class="nav-item d-block d-sm-none">
+              <a href="./index.html" class="nav-link -sidebar icon-power-off" title="Sair">
+                <span>Sair</span>
               </a>
             </li>
           </ul>
@@ -200,15 +217,15 @@
           </button>
         </div>
         <div class="modal-body bg-white">
-          <form action="./dashboard.html" class="form" novalidate>
+          <form action="#" class="form needs-validation" id="form-create" novalidate>
             <div class="form-row">
               <div class="form-group col-sm-6">
                 <label for="date" class="form-label">Data de consumo</label>
-                <input type="text" name="date" class="form-control" id="date">
+                <input type="text" name="date" class="form-control js-datetimepicker" id="date" required>
               </div>
               <div class="form-group col-sm-6">
                 <label for="type" class="form-label">Tipo</label>
-                <select name="type" id="type" class="form-control">
+                <select name="type" id="type" class="form-control" required>
                   <option value="" selected>Selecione</option>
                   <option value="1">Café da manhã</option>
                   <option value="2">Almoço</option>
@@ -220,11 +237,11 @@
             <div class="form-row">
               <div class="form-group col-sm-12">
                 <label for="details" class="form-label">Descrição</label>
-                <textarea name="details" class="form-control" id="details" rows="3"></textarea>
+                <textarea name="details" class="form-control" id="details" rows="3" required></textarea>
               </div>
               <div class="form-group col-sm-12">
                 <label for="calories" class="form-label">Calorias</label>
-                <input type="range" class="custom-range" step="1" min="0" max="5000" id="calories">
+                <input type="range" class="custom-range" step="1" min="0" max="5000" id="calories" required>
               </div>
             </div>
           </form>
@@ -233,7 +250,7 @@
           <button type="button" class="btn btn-danger" data-dismiss="modal">
             <span>Cancelar</span>
           </button>
-          <button type="button" class="btn btn-success">
+          <button type="submit" form="form-create" class="btn btn-success needs-validation">
             <span>Salvar</span>
           </button>
         </div>
@@ -251,15 +268,15 @@
           </button>
         </div>
         <div class="modal-body bg-white">
-          <form action="./dashboard.html" class="form" novalidate>
+          <form action="#" class="form needs-validation" id="form-edit" novalidate>
             <div class="form-row">
               <div class="form-group col-sm-6">
                 <label for="date" class="form-label">Data de consumo</label>
-                <input type="text" value="18/07/2019 12:35" name="date" class="form-control" id="date">
+                <input type="text" value="18/07/2019 12:35" name="date" class="form-control js-datetimepicker" id="date" required>
               </div>
               <div class="form-group col-sm-6">
                 <label for="type" class="form-label">Tipo</label>
-                <select name="type" id="type" class="form-control">
+                <select name="type" id="type" class="form-control" required>
                   <option value="">Selecione</option>
                   <option value="1">Café da manhã</option>
                   <option value="2" selected>Almoço</option>
@@ -271,7 +288,7 @@
             <div class="form-row">
               <div class="form-group col-sm-12">
                 <label for="details" class="form-label">Descrição</label>
-                <textarea name="details" class="form-control" id="details" rows="3">Arroz, feijão, carne, macarrão, salada</textarea>
+                <textarea name="details" class="form-control" id="details" rows="3" required>Arroz, feijão, carne, macarrão, salada</textarea>
               </div>
               <div class="form-group col-sm-12">
                 <label for="calories" class="form-label">Calorias</label>
@@ -284,7 +301,7 @@
           <button type="button" class="btn btn-danger" data-dismiss="modal">
             <span>Cancelar</span>
           </button>
-          <button type="button" class="btn btn-success">
+          <button type="submit" form="form-edit" class="btn btn-success">
             <span>Salvar</span>
           </button>
         </div>

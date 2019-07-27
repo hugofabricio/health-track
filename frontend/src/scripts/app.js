@@ -1,11 +1,11 @@
-// Load jQuery from NPM
+/* eslint-disable no-new */
 import $ from 'jquery'
-
 import fiap from '../images/fiap.svg'
-
+import Menu from './modules/menu'
+import form from './modules/form'
+import avatarInput from './modules/avatar'
 import './modules/mask'
 import './modules/share'
-import avatarInput from './modules/avatar'
 
 window.jQuery = $
 window.$ = $
@@ -23,7 +23,10 @@ export default class App {
       'font-size: 16px; color: #ED145B'
     )
 
+    new Menu()
+
     avatarInput()
+    form()
   }
 }
 

@@ -15,7 +15,7 @@
       <h1 class="brand -tiny -light h-bg-contain m-0">Health Track</h1>
     </a>
 
-    <ul class="navbar-nav flex-row ml-auto d-none d-flex">
+    <ul class="navbar-nav flex-row ml-auto d-none d-sm-flex">
       <li class="nav-item">
         <a class="nav-link -navbar -active icon-user-edit" href="./profile.html" title="Perfil">
           <span>Perfil</span>
@@ -27,11 +27,17 @@
         </a>
       </li>
     </ul>
+
+    <div class="flex-row ml-auto d-block d-sm-none">
+      <button class="toggle js-toggle-menu" type="button">
+        <span class="bar"></span>
+      </button>
+    </div>
   </header>
 
   <div class="container-fluid">
     <div class="row">
-      <nav class="sidebar">
+      <nav class="sidebar js-menu">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -62,6 +68,17 @@
             <li class="nav-item">
               <a href="./glycemia.html" class="nav-link -sidebar icon-heart" title="Glicemia">
                 <span>Glicemia</span>
+              </a>
+            </li>
+
+            <li class="nav-item d-block d-sm-none">
+              <a href="./profile.html" class="nav-link -sidebar icon-user-edit" title="Perfil">
+                <span>Perfil</span>
+              </a>
+            </li>
+            <li class="nav-item d-block d-sm-none">
+              <a href="./index.html" class="nav-link -sidebar icon-power-off" title="Sair">
+                <span>Sair</span>
               </a>
             </li>
           </ul>
@@ -107,21 +124,21 @@
               <div class="col-sm-12 col-lg-8 col-xl-9">
                 <div class="card">
                   <div class="card-body">
-                    <form action="./profile.html" class="form" novalidate>
+                    <form action="./profile.html" class="form needs-validation" novalidate>
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="name" class="form-label">Nome</label>
-                          <input type="text" name="name" class="form-control" id="name">
+                          <input type="text" name="name" class="form-control" id="name" value="Hugo Fabricio" required>
                         </div>
                         <div class="form-group col-sm-6 col-md-3">
                           <label for="birthdate" class="form-label">Nascimento</label>
-                          <input type="text" name="birthdate" class="form-control" id="birthdate">
+                          <input type="text" name="birthdate" class="form-control js-datepicker" value="25/03/1991" id="birthdate" required>
                         </div>
                         <div class="form-group col-sm-6 col-md-3">
                           <label for="birthdate" class="form-label">Gênero</label>
-                          <select class="custom-select">
-                            <option selected>Selecione</option>
-                            <option value="1">Masculino</option>
+                          <select class="custom-select" required>
+                            <option value="">Selecione</option>
+                            <option value="1" selected>Masculino</option>
                             <option value="2">Feminino</option>
                           </select>
                         </div>
@@ -131,7 +148,7 @@
                         </div>
                         <div class="form-group col-md-4">
                           <label for="email" class="form-label">E-mail</label>
-                          <input type="email" name="email" class="form-control" id="email">
+                          <input type="email" name="email" class="form-control" id="email" required>
                         </div>
                         <div class="form-group col-sm-6 col-md-4">
                           <label for="password" class="form-label">Senha</label>

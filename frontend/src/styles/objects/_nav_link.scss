@@ -29,10 +29,18 @@
       font-weight: 700;
     }
 
-    &:hover,
-    &.-active {
-      color: $color10;
-      background-color: darken($color30, 10%);
+    @include media(">phone") {
+      &:hover,
+      &.-active {
+        color: $color10;
+        background-color: darken($color30, 10%);
+      }
+    }
+
+    @include media("<=phone") {
+      width: 50%;
+      display: inline-block;
+      float: left;
     }
   }
 }
