@@ -3,11 +3,13 @@ class Menu {
     const toggle = document.querySelector('.js-toggle-menu')
     const menu = document.querySelector('.js-menu')
 
-    this.openMenu(toggle, menu)
+    if (toggle && menu) {
+      this.openMenu(toggle, menu)
 
-    document.addEventListener('keydown', evt => {
-      if (evt.keyCode === 27) this.closeMenu(toggle, menu)
-    })
+      document.addEventListener('keydown', evt => {
+        if (evt.keyCode === 27) this.closeMenu(toggle, menu)
+      })
+    }
   }
 
   openMenu (toggle, menu) {
