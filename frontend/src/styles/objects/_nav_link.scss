@@ -39,6 +39,7 @@
 
     @include media("<=phone") {
       width: 50%;
+      height: 105px;
       display: inline-block;
       float: left;
     }
